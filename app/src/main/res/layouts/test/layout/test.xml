@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:weightSum="12" >
+
+        <!--  header  -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#CAAE87"
+            android:weightSum="1.5" >
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:weightSum="10" >
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75" />
+                <ImageView
+                    android:id="@+id/btn_out"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/out" />
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.75" />
+                <LinearLayout
+                    android:id="@+id/test_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="7.65" >
+                    <LinearLayout
+                        android:id="@+id/time_ber"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:weightSum="1.2" >
+<!--                        <Space-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_weight="0.5" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/time_left"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_weight="0.2"-->
+<!--                            app:srcCompat="@drawable/rimit" />-->
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_time"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_weight="0.5" />-->
+                    </LinearLayout>
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.35" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1.3"-->
+<!--                        app:srcCompat="@drawable/hourglass" />-->
+                </LinearLayout>
+                <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.35" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.15" />
+        </LinearLayout>
+
+        <!--  contents  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#FFFFED"
+            android:layout_weight="10.5" >
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

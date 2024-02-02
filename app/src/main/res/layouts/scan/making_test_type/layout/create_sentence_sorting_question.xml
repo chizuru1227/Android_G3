@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android ="http://schemas.android.com/apk/res/android"
+    xmlns:app ="http://schemas.android.com/apk/res-auto"
+    android:layout_width ="match_parent"
+    android:layout_height ="match_parent" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="30" >
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="28"
+            android:weightSum="24" >
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--      戻るボタン      -->
+            <!--            <LinearLayout-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_weight="0.1"-->
+            <!--                android:weightSum="10" >-->
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="1.5" >-->
+            <!--                    <ImageButton-->
+            <!--                        android:id="@+id/btn_back"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:src="@drawable/back_arrow"/>-->
+            <!--                </LinearLayout>-->
+            <!--            </LinearLayout>-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:weightSum="10" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" >
+                    <Button
+                        android:id="@+id/back_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:text="戻る"
+                        android:onClick="back_btnClick" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--            <LinearLayout-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                android:layout_weight="1.7"-->
+            <!--                android:weightSum="11.5" >-->
+            <!--                <Space-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_weight="0.5" />-->
+
+            <!--                <ImageButton-->
+            <!--                    android:id="@+id/btn_back"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:paddingTop="15dp"-->
+            <!--                    android:paddingBottom="15dp"-->
+            <!--                    android:paddingLeft="20dp"-->
+            <!--                    android:paddingRight="25dp"-->
+            <!--                    android:src="@drawable/back_arrow"-->
+            <!--                    android:background="@drawable/shape"/>-->
+
+            <!--            </LinearLayout>-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="18" >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="14" >
+
+                    <!--      問題テキスト      -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="スキャン結果"/>
+
+                    <!--      テキスト      -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:text="もんだい"
+                        android:padding="10dp"
+                        android:background="@drawable/shape"/>
+
+                    <!--      問題テキスト      -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="並べ替え単語"/>
+
+                    <!--      テキスト      -->
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:text="もんだい"
+                        android:padding="10dp"
+                        android:gravity="top|left"
+                        android:background="@drawable/shape"/>
+
+                    <!--      問題テキスト      -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="並べ替え単語"/>
+
+                    <!--      テキスト      -->
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:text="もんだい"
+                        android:padding="10dp"
+                        android:gravity="top|left"
+                        android:background="@drawable/shape"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:weightSum="6" >
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/next_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:text="解答群を作成する"
+                    android:onClick="next_btnClick"  />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

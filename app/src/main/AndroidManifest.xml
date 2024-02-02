@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.goprot.ih4c_mobile">
+    <uses-permission android:name="android.permission.INTERNET">
+
+    </uses-permission>
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IH4C_Mobile">
+        <activity
+            android:name=".MatchSelectQuestion"
+            android:exported="true" />
+        <activity
+            android:name=".loading"
+            android:exported="true" />
+        <activity
+            android:name=".Test"
+            android:exported="true" />
+        <activity
+            android:name=".FastPress"
+            android:exported="true" />
+        <activity
+            android:name=".FastPress2_result"
+            android:exported="true" />
+        <activity
+            android:name=".QuestionCreatePage"
+            android:exported="true" />
+        <activity
+            android:name=".ScanPage"
+            android:exported="true" />
+        <activity
+            android:name=".ScanCheck"
+            android:exported="true" />
+        <activity
+            android:name=".QuestionSelect"
+            android:exported="true" />
+        <activity
+            android:name=".login"
+            android:exported="true" />
+        <activity
+            android:name=".Check4Choices"
+            android:exported="true" />
+        <activity
+            android:name=".CheckFillBlankProblem"
+            android:exported="true" />
+
+        <activity
+            android:name=".CheckSentenceSorting"
+            android:exported="true" />
+        <activity
+            android:name=".Create4Choices"
+            android:exported="true" />
+        <activity
+            android:name=".CreateFillBlankProblem"
+            android:exported="true" />
+        <activity
+            android:name=".CreateSentenceSorting"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

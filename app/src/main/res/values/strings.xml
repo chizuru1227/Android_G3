@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">なるホー</string>
+    <string name="stamp">スタンプ</string>
+    <string name="analysis">分析</string>
+    <string name="favorite_subject">得意科目</string>
+    <string name="weak">苦手科目</string>
+    <string name="solve">問題を解く</string>
+    <string name="press">早押し</string>
+    <string name="history">履歴</string>
+    <string-array name="list_subject">
+        <item>科目名①</item>
+        <item>科目名②</item>
+        <item>科目名③</item>
+        <item>科目名④</item>
+        <item>科目名⑤</item>
+    </string-array>
+    <string name="name">名前</string>
+    <string name="pass">パスワード</string>
+    <string name="up">写真を\nアップロード</string>
+    <string name="pass_change">パスワードを\n変更</string>
+    <string name="now_pass">現在のパスワード</string>
+    <string name="new_pass">新規パスワード</string>
+    <string name="check_pass">新規パスワードの確認</string>
+    <string name="change_pass">パスワードを変更</string>
+    <string name="incorrect_answer">✕</string>
+    <string name="incorrect_text">不正解</string>
+    <string name="correct_answer">〇</string>
+    <string name="correct_text">正解</string>
+    <string name="noting_answer">―</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="12">
+        <!--  Question page-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="12"
+            android:weightSum="17">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.1">
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:weightSum="10"
+                    >
+                    <!--　question answer   -->
+                    <Button
+                        android:id="@+id/back_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:backgroundTint="@color/loginbutton"
+                        android:text="戻る"
+                        android:layout_weight="10"
+                        android:onClick="back_btnClick"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:weightSum="10"
+                    >
+                    <!--　question answer   -->
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:backgroundTint="@color/loginbutton"
+                        android:text="問題を解く"
+                        android:layout_weight="10"
+                        android:onClick="next_btnClick"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:weightSum="10">
+                    <!--  time attack part  -->
+                    <TextView
+                        android:id="@+id/config_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:layout_weight="5.8"/>
+<!--                    <TextView-->
+<!--                        android:id="@+id/config_text"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:text="タイムアタックON/OFF"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textSize="18dp"-->
+<!--                        android:layout_weight="5.8"/>-->
+<!--                    <LinearLayout-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_weight="4"-->
+<!--                        android:weightSum="2">-->
+<!--                        <Space-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:layout_weight="0.5"/>-->
+<!--                        <Switch-->
+<!--                            android:id="@+id/switch1"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:thumb="@drawable/thumbl"-->
+<!--                            android:track="@drawable/track"-->
+<!--                            android:layout_weight="1"/>-->
+<!--                    </LinearLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:weightSum="9">
+                <Button
+                    android:id="@+id/grade_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="1年生"/>
+                <Button
+                    android:id="@+id/grade_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="2年生"/>
+                <Button
+                    android:id="@+id/grade_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="3年生"/>
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3"/>
+            <!-- check all    -->
+            <CheckBox
+                android:id="@+id/allcheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:button="@drawable/checkbox"
+                android:buttonTint="@color/gray"
+                android:onClick="checkall"
+                android:text="全項目チェック"
+                android:layout_weight="0.8"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:weightSum="10">
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.06"
+                        android:weightSum="2">
+                        <!-- kokugo  checkbox  -->
+                        <CheckBox
+                            android:id="@+id/kokugo_checkbox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:buttonTint="@color/gray"
+                            android:onClick="checkgroup"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_weight="0.2"/>
+                        <!--  kokugo button  -->
+                        <Button
+                            android:id="@+id/kokugo_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/koumoku_rounded_button"
+                            app:backgroundTint="@null"
+                            android:onClick="buttongroup"
+                            android:text="国語"
+                            android:layout_weight="1.7"/>
+                    </LinearLayout>
+                    <!-- kokugo bunya -->
+                    <ScrollView
+                        android:id="@+id/scroll_kokugo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+                    <LinearLayout
+                        android:id="@+id/group_kokugo"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo4"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo5"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/kokugo6"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck1"-->
+<!--                            android:text="分野" />-->
+
+                    </LinearLayout>
+
+                    </ScrollView>
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.03"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.06"
+                        android:weightSum="2">
+                        <!-- sugaku  checkbox  -->
+                        <CheckBox
+                            android:id="@+id/suugaku_cehckbox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:buttonTint="@color/gray"
+                            android:onClick="checkgroup"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_weight="0.2"/>
+                        <!--  sugaku button  -->
+                        <Button
+                            android:id="@+id/suugaku_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sugaku_rounded_button"
+                            app:backgroundTint="@null"
+                            android:onClick="buttongroup"
+                            android:text="数学"
+                            android:layout_weight="1.7"/>
+                    </LinearLayout>
+                    <!-- sugaku bunya -->
+
+                    <ScrollView
+                        android:id="@+id/scroll_sugaku"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+                    <LinearLayout
+                        android:id="@+id/group_sugaku"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/sugaku1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck2"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/sugaku2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck2"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/sugaku3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck2"-->
+<!--                            android:text="分野" />-->
+                    </LinearLayout>
+                    </ScrollView>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.03"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.06"
+                        android:weightSum="2">
+                        <!-- shakai  checkbox  -->
+                        <CheckBox
+                            android:id="@+id/shakai_checkbox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:buttonTint="@color/gray"
+                            android:onClick="checkgroup"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_weight="0.2"/>
+                        <!--  shakai button  -->
+                        <Button
+                            android:id="@+id/shakai_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shakai_rounded_button"
+                            app:backgroundTint="@null"
+                            android:onClick="buttongroup"
+                            android:text="社会"
+                            android:layout_weight="1.7"/>
+                    </LinearLayout>
+                    <!-- shakai bunya -->
+                    <ScrollView
+                        android:id="@+id/scroll_shakai"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+                    <LinearLayout
+                        android:id="@+id/group_shakai"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/shakai1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck3"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/shakai2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck3"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/shakai3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck3"-->
+<!--                            android:text="分野" />-->
+
+                    </LinearLayout>
+                    </ScrollView>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.03"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.06"
+                        android:weightSum="2">
+                        <!-- rika  checkbox  -->
+                        <CheckBox
+                            android:id="@+id/rika_checkbox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:buttonTint="@color/gray"
+                            android:onClick="checkgroup"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_weight="0.2"/>
+                        <!--  rika button  -->
+                        <Button
+                            android:id="@+id/rika_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rika_rounded_button"
+                            app:backgroundTint="@null"
+                            android:onClick="buttongroup"
+                            android:text="理科"
+                            android:layout_weight="1.7"/>
+                    </LinearLayout>
+                    <!-- rika bunya -->
+                    <ScrollView
+                        android:id="@+id/scroll_rika"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:id="@+id/group_rika"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/rika1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck4"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/rika2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck4"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/rika3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck4"-->
+<!--                            android:text="分野" />-->
+
+                    </LinearLayout>
+                    </ScrollView>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.03"/>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.06"
+                        android:weightSum="2">
+                        <!-- english  checkbox  -->
+                        <CheckBox
+                            android:id="@+id/eigo_checkbox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:buttonTint="@color/gray"
+                            android:onClick="checkgroup"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_weight="0.2"/>
+                        <!--  english button  -->
+                        <Button
+                            android:id="@+id/eigo_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/eigo_rounded_button"
+                            app:backgroundTint="@null"
+                            android:onClick="buttongroup"
+                            android:text="英語"
+                            android:layout_weight="1.7"/>
+                    </LinearLayout>
+                    <!-- eigo bunya -->
+                    <ScrollView
+                        android:id="@+id/scroll_eigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/group_eigo"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/eigo1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck5"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/eigo2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck5"-->
+<!--                            android:text="分野" />-->
+<!--                        <CheckBox-->
+<!--                            android:id="@+id/eigo3"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:onClick="uncheck5"-->
+<!--                            android:text="分野" />-->
+
+                    </LinearLayout>
+                    </ScrollView>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
